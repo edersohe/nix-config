@@ -10,6 +10,7 @@
     # essentials
     neovim
     git
+    wget
     iproute2
     nmap
     archiver
@@ -27,7 +28,6 @@
     nvimpager
     ripgrep
     fd
-    tmux
     chezmoi
     lazygit
     html5-tidy
@@ -39,9 +39,10 @@
     pass
     kopia
     lf
+    zellij
 
     # gui
-    alacritty
+    foot
     vieb
     mpd
     mpv

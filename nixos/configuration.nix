@@ -67,6 +67,7 @@
   #  wget
     neovim
     git
+    wget
     iproute2
     nmap
     archiver
