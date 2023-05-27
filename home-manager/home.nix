@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/eder";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     # essentials
@@ -19,7 +20,7 @@
     jq
     inotify-tools
     terminus-font
-    keyd
+    #keyd
 
     # terminal
     fzf
@@ -47,5 +48,6 @@
     mpd
     mpv
     imv
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
