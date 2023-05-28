@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hyprland, ... }:
 
 {
   home.username = "eder";
@@ -19,8 +19,6 @@
     rsync
     jq
     inotify-tools
-    terminus-font
-    #keyd
 
     # terminal
     fzf
@@ -31,7 +29,7 @@
     fd
     chezmoi
     lazygit
-    html5-tidy
+    #html5-tidy
     sshpass
     neofetch
     btop
@@ -50,4 +48,9 @@
     imv
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  imports = [
+    hyprland.homeManagerModules.default
+  ];
+  wayland.windowManager.hyprland.enable = true;
 }

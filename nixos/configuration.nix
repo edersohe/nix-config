@@ -8,7 +8,7 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -74,7 +74,6 @@
     rsync
     jq
     inotify-tools
-    # keyd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
