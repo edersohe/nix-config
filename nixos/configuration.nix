@@ -73,7 +73,6 @@
     curl
     rsync
     jq
-    inotify-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

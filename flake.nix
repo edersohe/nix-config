@@ -24,7 +24,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.eder = import ./home-manager/home.nix;
+              home-manager.users.eder = import ./home-manager/graphical.nix;
               home-manager.extraSpecialArgs = {
                 inherit pkgs hyprland;
 	      };
@@ -33,10 +33,16 @@
         };
       };
       homeConfigurations = {
-        eder = home-manager.lib.homeManagerConfiguration {
+        "eder@windows" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs hyprland;
           modules = [
-            ./home-manager/home.nix
+            ./home-manager/terminal.nix
+          ];
+        };
+        "eder@debian" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs hyprland;
+          modules = [
+            ./home-manager/graphical.nix
           ];
         };
       };

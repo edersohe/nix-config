@@ -1,11 +1,10 @@
-{ config, pkgs, hyprland, ... }:
+{ config, pkgs, ... }:
 
 {
   home.username = "eder";
   home.homeDirectory = "/home/eder";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
-  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     # essentials
@@ -18,7 +17,6 @@
     curl
     rsync
     jq
-    inotify-tools
 
     # terminal
     fzf
@@ -39,18 +37,8 @@
     kopia
     lf
     zellij
-
-    # gui
-    foot
-    vieb
-    mpd
-    mpv
-    imv
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    chafa
+    inotify-tools
+    w3m
   ];
-
-  imports = [
-    hyprland.homeManagerModules.default
-  ];
-  wayland.windowManager.hyprland.enable = true;
 }
